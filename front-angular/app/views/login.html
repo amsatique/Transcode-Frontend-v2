@@ -1,0 +1,19 @@
+<div class="login jumbotron center-block">
+    <h1>SIGN-IN</h1>
+    <form role="form">
+        <div class="form-group">
+            <label for="email">Mail address</label>
+            <input type="text" class="form-control" ng-model="login.user.email" id="email" placeholder="Type your mail address">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" ng-model="login.user.password" placeholder="Type your password">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-default" ng-click="login.loginUser()">Send</button>
+            ---- ADD OAUTH BUTTONS ----
+        </div>
+    </form>
+    <br><b><a href="/register">Create an account</a></b></br>
+    <b><a href="/forgot">Forgot password</a></b>
+</div>

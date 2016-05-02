@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><b>Transcode</b></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/"><b>Home</b></a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <ul class="pull-right">
+            <button type="button" class="btn btn-success navbar-btn" ng-click="public.login()"><b>login</b></button>
+            <button type="button" class="btn btn-info navbar-btn" ng-click="public.register()"><b>register</b></button>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <h3>Hi, Welcome on Transcode Service.</h3>
+    <p>
+        Here you can upload video from almost any format and then convert them in any output format you'll choose.
+    </p>
+    <p>
+        Please note, an account will be required in order to proceed the transcoding of your upload.
+    </p>
+    <p>
+        You will be also prompted to pay an amount based on your uploads.
+    </p>
+</div>
+
+
+<button type="button" class="btn btn-warning navbar-btn"  ngf-select="public.upload($files)" ngf-multiple="true"><b>Select Multiple Files</b></button>
+<br/>
+Or Drop Files:
+<div ngf-drop ngf-select ng-model="public.files" class="drop-box"
+     ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+     accept="'video/*'"
+     ngf-pattern="'video/*'"><h4><b>Drop your files here or click to upload</b></h4></div>
+<div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+Files:
+<ul>
+    <li ng-repeat="f in public.files" style="font:smaller">{{public.f.name}} {{public.f.$error}} {{public.f.$errorParam}}</li>
+</ul>
+Upload Log:
+<pre>{{public.log}}</pre>

@@ -1,0 +1,16 @@
+<div class="reset jumbotron center-block">
+    <h1>Reset your password</h1>
+    <form role="form">
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" ng-model="reset.user.password" placeholder="Type your new password">
+        </div>
+        <div class="form-group">
+            <label for="password-confirm">Confirm your password</label>
+            <input type="password" class="form-control" id="password-confirm" ng-model="reset.user.passwordConfirmation" placeholder="Retype your new password">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="reset.resetPassword()">Send</button>
+    </form>
+    <br><b><a href="/login">Click here to login</a></b></br>
+    <b><a href="/register">Click here to register</a></b>
+</div>

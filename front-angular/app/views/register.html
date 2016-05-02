@@ -1,0 +1,21 @@
+<div class="register center-block jumbotron">
+    <form role="form">
+        <h1>SIGN-UP</h1>
+
+        <div class="form-group">
+            <label for="username">Mail address</label>
+            <input type="text" class="form-control" id="username" ng-model="register.user.username" placeholder="Type in your mail address">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" ng-model="register.user.password" placeholder="Type in your password">
+        </div>
+        <div class="form-group">
+            <label for="password-confirm">Password confirmation</label>
+            <input type="password" class="form-control" id="password-confirm" ng-model="register.user.passwordConfirmation" placeholder="Retype your Password">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="register.createUser()">Send</button>
+    </form>
+    <br><b><a href="/login">I have an account</a></b></br>
+    <b><a href="/forgot">Forgot password</a></b>
+</div>
